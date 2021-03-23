@@ -1,75 +1,29 @@
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  background-color: #f1f1f1;
 }
 
-/* The dropdown container */
-.dropdown {
-  float: right;
-  overflow: hidden;
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 6px 0px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+.container {
+  position: center;
+  /* padding: 2px 16px; */
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -78,8 +32,14 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
+  padding: 0.5px 0 0.5px 0;
   
 }
+
+.footer:hover {
+  color: red;
+}
+
 
 .column {
   float:left;
@@ -88,10 +48,10 @@
   height: 300px; 
 }
 
-.row:hover {
+/* .row :hover {
   color: red;
+} */
 
-}
 
 
 .row:after {
@@ -106,22 +66,46 @@
   }
 }
 
-h1 {
+/*h1 class*/
+.first {
   text-align: center;
-  color: rgb(4, 24, 7);
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-size: 50px;
+  background-color: black;
 
 }
 
-h1:hover {
+#h1-1 {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  /* background-color: black; */
+}
+
+/* h1:hover {
   color: red;
-}
+} */
 
-.img-div {
+.image {
 display: flex;
 flex-direction: row;
 justify-content: center;
-gap: 200px;
+gap: 40px;
+height: 300px;
+}
+
+.image img {
+height: 200px;
+width: 80%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; 
+  }
 }
