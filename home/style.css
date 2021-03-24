@@ -2,6 +2,10 @@
     padding: 0px;
     margin: 0px;
   }
+
+  /* body {
+    font-size: 0.1em;
+  } */
   
   .topnav {
     position:sticky;
@@ -13,6 +17,7 @@
     text-decoration: none;
     color: white;
     overflow: hidden;
+    
   
   }
   
@@ -37,6 +42,17 @@
     }
   }
 
+  h1 {
+    font-family: 'Prata', serif;   }
+
+  h2 {
+    font-family: 'Prata', serif;
+     }
+
+  p {
+    font-family: 'Prata', serif;
+      }
+
 
   .card {
       text-align: center;
@@ -48,25 +64,39 @@
   }
 
   .row {
+    margin: 2em;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    column-gap: 10px;
-    /* flex-direction: ; */
+    /* grid-auto-rows: minmax(100px); */
     justify-content: center;
-    margin: 2em;
-}
+    grid-row-gap: 10px; 
+    grid-column-gap: 10px;
+    
+
+  }
 
   .column {
-    margin: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+      /* background-color: #f8f8f8;
+    box-shadow: 0 0 3px #666; */
+    align-self: auto;
+  
+
 }
 
-.column-button {
-  display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-background-color: red;
+button {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding:0.1rem;
+  font-family: 'Prata', serif;
 }
+
+button:hover {
+  background-color: lightblue;
+}
+
   
 @media screen and (max-width: 700px) {
     .row {
@@ -89,7 +119,6 @@ background-color: red;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 10px;
-    /* flex-direction: ; */
     justify-content: center;
     margin: 4em;
     gap: 40px;
